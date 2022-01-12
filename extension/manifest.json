@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Gnipet",
+  "version": "1.0",
+  "icons": {
+    "16": "logo.jpg",
+    "48": "logo.jpg",
+    "128": "logo.jpg"
+  },
+  "permissions": ["https://mail.google.com/", "https://inbox.google.com/"],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*", "https://inbox.google.com/*"],
+      "js": ["inboxsdk.js", "main.js"]
+    }
+  ]
+}
